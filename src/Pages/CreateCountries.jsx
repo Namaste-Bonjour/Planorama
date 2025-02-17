@@ -1,8 +1,8 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../config/api";
-
+import "./create.css";
 
 
 
@@ -11,11 +11,34 @@ import { API_URL } from "../config/api";
 function CreateCountries () {
 const [name, setName] = useState("");
 const [image, setImage] =useState("");
+const [existingCountries, setExistingCountries] = useState([]);
+  const [msg, setMsg] = useState(""); 
 const navigate = useNavigate();
+
+
+useEffect (() => {
+    axios.get (`${API_URL}/countries.json`)
+    .then((response) => {
+        const countryObj =response.data;
+        const countryArr = Object.keys(countryObj) .map((id) => {
+            return{id,
+                ...countryObj[id],};
+        });
+        setExistingCountries(countryArr)
+    })
+},[]);
 
 const handleSubmit = (e) => {
     e.preventDefault();
-
+    const countryExists = existingCountries.some(
+        (country) => country.name.toLowerCase() === name.toLowerCase()
+      );
+  
+      if (countryExists) {
+        setMsg("This country already exists!");  
+        return;  
+      }
+  
 const newCountry ={
     name: name,
     image:image
@@ -27,14 +50,14 @@ axios.post(`${API_URL}/countries.json`, newCountry)
 })
 .catch(e => console.log("Error", e));
 
-}
+};
 
     return (
 <>
 <div className="CreateCountries">
 
 <h2> Add Country </h2>
-
+{msg && <p className="error"> { msg}</p>}
 <form onSubmit ={handleSubmit} >
 
 <label> Name :
@@ -58,6 +81,7 @@ axios.post(`${API_URL}/countries.json`, newCountry)
 <button> Create </button>
 </form>
 </div>
+
 </>
 
     )

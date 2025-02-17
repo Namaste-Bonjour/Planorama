@@ -1,0 +1,84 @@
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  label {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #34495e;
+  }
+  
+ 
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #ca1bda;
+  }
+  
+  .CreateCountries button , .CreateCities button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #7fdb34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  .CreateCountries{
+    background: #17c5d1;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 3px grey;
+    width: 500px;
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+
+  }
+
+  .CreateCities{
+    background: #a25ff0;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 3px grey;
+    width: 500px;
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .error {
+    color: red;
+  }

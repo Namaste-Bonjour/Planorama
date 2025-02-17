@@ -9,7 +9,7 @@ import "./CountryList.css";
 
 
 
-function CountryList() {
+function CountryList({ setCountries }) {
 const[country, setCountry] = useState(null);
 
 useEffect(() => {
@@ -23,9 +23,10 @@ useEffect(() => {
         });
 
         setCountry(countriesArr);
+        setCountries(countriesArr);
     })
     .catch(e => console.log("Error" , e));
-},[]);
+},[setCountries]);
 
 if(country === null) {
     return "Loading";
