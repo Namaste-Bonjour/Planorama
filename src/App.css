@@ -1,18 +1,14 @@
-.Country-List{
-display:flex;
-justify-content: center;
-gap:50px;
-margin: 200px;
 
 
+.CreateCountries{
+    background: #f9eec3;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 3px grey;
+    width: 400px;
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
 
-}
-.Country-List label{
-    background-color: rgb(118, 168, 201);
-    width:300px;
-    align-content: center;
-   
-}
-.Country-List img{
-    width:200px;
-}
+  }
