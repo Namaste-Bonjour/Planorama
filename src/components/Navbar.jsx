@@ -1,12 +1,21 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
+
 function navbar() {
   return (
-    <div>
+    <div className="Navbar">
       <h1>Planorama</h1>
-      <nav>
-        <button>Menu</button>
-        <button>Citylist</button>
-        <button>About us</button>
+      <nav className="Navbar">
+        <NavLink to="/">
+          <button>Home</button>
+        </NavLink>
+        <NavLink to="/countries/create">
+          <button>Contribute</button>
+        </NavLink>
+        <NavLink to="" >
+          <button>About us</button>
+        </NavLink>
       </nav>
     </div>
   );
