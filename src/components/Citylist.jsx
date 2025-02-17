@@ -56,6 +56,11 @@ const groupedCities = cities.reduce((acc, city) => {
                 <label className="card" key={cityDetails.id}>
                   <Link to={`/cities/${cityDetails.city}`}>
                     <h2>{cityDetails.city}</h2>
+                    <p>{cityDetails.landmark}</p>
+                    <p>{cityDetails.description}</p>
+                    <p>{cityDetails.activities}</p>
+                    <p>{cityDetails.time}</p>
+                    <p>{cityDetails.restaurant}</p>
                   </Link>
                 </label>
               ))}
