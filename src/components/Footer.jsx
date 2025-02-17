@@ -1,5 +1,7 @@
 import React from "react";
+
 function footer() {
-  return <h2> By Anjana & Sebastien</h2>;
+  return 
+  <h5> By Anjana & Sebastien</h5>;
 }
 export default footer;

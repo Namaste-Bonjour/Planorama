@@ -1,2 +1,17 @@
-function citylist() {}
-export default citylist;
+
+
+function Citylist() {
+
+
+    return (
+
+        <>
+           
+
+       
+
+
+        </>
+    )
+}
+export default Citylist;

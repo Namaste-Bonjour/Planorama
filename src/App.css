@@ -1,0 +1,18 @@
+.Country-List{
+display:flex;
+justify-content: center;
+gap:50px;
+margin: 200px;
+
+
+
+}
+.Country-List label{
+    background-color: rgb(118, 168, 201);
+    width:300px;
+    align-content: center;
+   
+}
+.Country-List img{
+    width:200px;
+}
