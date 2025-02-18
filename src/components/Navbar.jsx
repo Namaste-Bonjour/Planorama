@@ -6,7 +6,7 @@ function navbar() {
   return (
     <div className="Navbar">
       <h1>Planorama</h1>
-      <nav className="Navbar">
+      <nav className="nav">
         <NavLink to="/">
           <button>Home</button>
         </NavLink>

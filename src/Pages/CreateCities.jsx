@@ -14,10 +14,12 @@ function CreateCities({ countries }) {
     const [time, setTime] = useState("");
     const [country, setCountry] = useState("");
     const [description, setDescription] = useState("");
-    const [landmark, setLandmark] = useState("");
-    const [restaurant, setRestaurant] = useState("");
+    const [landmarks, setLandmark] = useState("");
+    const [restaurants, setRestaurant] = useState("");
     const [budget, setBudget] = useState("");
     const [image, setImage] = useState("");
+    const [latitude, setLatitude] = useState("");
+    const [longitude, setLongitude] = useState("");
     const navigate = useNavigate();
 
 
@@ -33,14 +35,16 @@ function CreateCities({ countries }) {
             activities: activities,
             time: time,
             description: description,
-            landmark: landmark,
-            restaurant: restaurant,
+            landmarks: landmarks,
+            restaurants: restaurants,
             image: image,
-            budget: budget
+            budget: budget,
+            latitude: latitude,
+            longitude : longitude
         };
 
 
-        axios.post(`${API_URL}/countries/cities.json`, newCity)
+        axios.post(`${API_URL}/cities.json`, newCity)
             .then((response) => {
                 console.log(response.data)
                 navigate("/")
@@ -61,6 +65,7 @@ function CreateCities({ countries }) {
                             name="country"
                             value={country}
                             onChange={(e) => setCountry(e.target.value)}
+                            required
                         >
                             <option value="">Select a country</option>
                             {countries && countries.length > 0 ? (
@@ -84,11 +89,11 @@ function CreateCities({ countries }) {
                             onChange={(e) => { setCity(e.target.value) }} />
                     </label>
 
-                    <label> Landmark :
+                    <label> Landmarks :
                         <input type="text"
-                            name="landmark"
+                            name="landmarks"
                             placeholder="Enter landmark"
-                            value={landmark}
+                            value={landmarks}
                             onChange={(e) => { setLandmark(e.target.value) }} />
                     </label>
 
@@ -117,12 +122,20 @@ function CreateCities({ countries }) {
                             onChange={(e) => { setTime(e.target.value) }} />
                     </label>
 
-                    <label> Restaurant :
+                    <label> Restaurants :
                         <input type="text"
-                            name="restaurant"
+                            name="restaurants"
                             placeholder="Enter Restaurant"
-                            value={restaurant}
+                            value={restaurants}
                             onChange={(e) => { setRestaurant(e.target.value) }} />
+                    </label>
+
+                    <label> Image :
+                        <input type="url"
+                            name="image"
+                            placeholder="Enter image"
+                            value={image}
+                            onChange={(e) => { setImage(e.target.value) }} />
                     </label>
 
                     <label> Budget(per person) :
@@ -133,6 +146,22 @@ function CreateCities({ countries }) {
                             onChange={(e) => { setBudget(e.target.value) }} />
                     </label>
 
+                    <label> Latitude :
+                        <input type="text"
+                            name="latitude"
+                            placeholder="Enter latitude"
+                            value={latitude}
+                            onChange={(e) => { setLatitude(e.target.value) }} />
+                    </label>
+
+                    <label> Longitude :
+                        <input type="text"
+                            name="longitude"
+                            placeholder="Enter longitude"
+                            value={longitude}
+                            onChange={(e) => { setLongitude(e.target.value) }} />
+                    </label>
+                    
                     <button> Create </button>
                 </form>
             </div>

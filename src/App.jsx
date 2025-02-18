@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Citylist from "./components/Citylist";
 import CountryList from "./components/CountryList";
 import CreateCities from "./Pages/CreateCities";
+import CityDetails from "./components/CityDetails";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<CountryList setCountries={setCountries} />} />
         <Route path="/countries/create" element={<CreateCities countries={countries} />} />
         <Route path="/countries/:name" element={<Citylist />} />
+        <Route path="/cities/:city" element={<CityDetails/>} />
       </Routes>
       <Footer />
     </>
