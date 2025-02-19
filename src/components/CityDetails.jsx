@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { API_URL } from "../config/api";
 import axios from "axios";
+import "./CountryList.css"
 
 
 function CityDetails() {
@@ -58,32 +59,36 @@ function CityDetails() {
     }
 
 
-    const sortedActivities = cityDetails.activities
-        .split(',')
-        .map(activity => activity.trim())
-        .sort();
+    const sortedDetails = (str) => {
+        return str.split('.')
+            .map(activity => activity.trim())
+            .sort();
+    }
 
-    const sortedLandmark = cityDetails.landmarks
-        .split(',')
-        .map(land => land.trim())
-        .sort();
+    const sortedLandmark = sortedDetails(cityDetails.landmarks);
+    const sortedActivities = sortedDetails(cityDetails.activities);
+    const sortedRestaurants = sortedDetails(cityDetails.restaurants);
 
-    const sortedRestaurants = cityDetails.restaurants
-        .split(',')
-        .map(rest => rest.trim())
-        .sort();
 
     return (
 
         <>
-            <h3 className="city">{cityDetails.city}</h3>
-            <p><b>{cityDetails.description}</b></p>
-            <ul> <b>Landmark:</b>{sortedLandmark.map((land, i) => {
-                return (
-                    <li className="activity" key={i}>
-                        {land}
-                    </li>)
-            })}  </ul>
+            <h2 className="city"><i> {cityDetails.city} </i> </h2>
+            <p className="description"><b>{cityDetails.description}</b></p>
+
+            <div>
+                <img className="image" src={cityDetails.image} />
+            </div>
+
+            <label className="Landmark">
+                <ul> <b>Landmark:</b>{sortedLandmark.map((land, i) => {
+                    return (
+                        <li className="activity" key={i}>
+                            {land}
+                        </li>)
+                })}  </ul>
+            </label>
+
             <ul><b> Activities: </b>{sortedActivities.map((elm, i) => {
                 return (
                     <li className="activity" key={i}>
@@ -99,9 +104,6 @@ function CityDetails() {
                         {food} <br />
                     </span>)
             })} </ul>
-            <div>
-                <img src={cityDetails.image} />
-            </div>
 
             <p><b>Budget (per person): </b>{cityDetails.budget}</p>
 
