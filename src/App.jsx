@@ -8,12 +8,12 @@ import CountryList from "./components/CountryList";
 import CreateCities from "./Pages/CreateCities";
 import CityDetails from "./components/CityDetails";
 import UpdateCities from "./Pages/UpdateCities";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
-  // "/cities/edit/Stuttgart"
 
-  const [countries, setCountries] = useState([]);
+
+  const [countries, setCountries] = useState(null);
   return (
     <>
       <Navbar />
@@ -25,7 +25,7 @@ function App() {
         />
         <Route path="/countries/:name" element={<Citylist />} />
         <Route path="/cities/:cityId" element={<CityDetails />} />
-        <Route path="/cities/edit/:cityId" element={<UpdateCities />} />
+        <Route path="/cities/edit/:cityId" element={<UpdateCities countries={countries} />} />
         <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
       <Footer />

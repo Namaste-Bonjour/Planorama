@@ -82,3 +82,103 @@ h2 {
   .error {
     color: red;
   }
+
+  /* About us page */
+
+
+
+
+.About {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #a6dcec; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.About h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0d4581; 
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.About h3 {
+  font-size: 1.25rem; 
+  font-size: larger;
+  color: #067a19; 
+ 
+}
+
+.About p {
+  font-size: 1.125rem; 
+  color: #163133; 
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+
+.About .info {
+  font-size: 1.125rem; 
+  margin-left: 20px; 
+}
+
+.About ul {
+  font-size: 1.125rem; 
+  list-style-type: none; 
+  padding-left: 20px; 
+  margin-top: 10px;
+}
+
+.About li {
+  font-size: 1.125rem;
+  color: #03725c; 
+  margin-bottom: 8px;
+}
+
+.About li b {
+  font-weight: bold;
+  color: #2c3e50; 
+}
+
+.About li:hover {
+  color: #e74c3c; 
+  cursor: pointer;
+}
+
+.About .info ul {
+  margin-left: 40px; 
+}
+
+.About h3, .About p {
+  max-width: 1600px;
+  text-align: justify; 
+}
+
+.About h2 i {
+  color: #3498db; 
+  font-style: italic;
+}
+
+/*  styling for mobile responsiveness */
+@media (max-width: 768px) {
+  .About {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .About h2 {
+    font-size: 1.5rem;
+  }
+
+  .About h3, .About p, .About li {
+    font-size: 1rem; 
+  }
+
+  .About .info, .About ul {
+    padding-left: 10px; 
+}
+}

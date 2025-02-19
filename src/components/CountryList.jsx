@@ -35,7 +35,6 @@ if(country === null) {
     return (
 
         <>
-        
             <div className="Country-List">
                 {country.map((countryDetails) => {
                     return(
@@ -47,11 +46,7 @@ if(country === null) {
                             </label>
                     )
                 })}
-           
-
             </div>
-
-
         </>
     )
 }

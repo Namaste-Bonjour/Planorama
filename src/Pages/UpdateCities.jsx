@@ -99,7 +99,8 @@ function UpdateCities({ countries }) {
 
                         >
                             <option value="">Select a country</option>
-                            {countries && countries.length > 0 ? (
+                            { console.log(countries)}
+                           { countries && countries.length > 0 ? (
                                 countries.map((countryDetail) => (
                                     <option key={countryDetail.id} value={countryDetail.name}>
                                         {countryDetail.name}
