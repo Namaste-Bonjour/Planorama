@@ -8,10 +8,9 @@ import CountryList from "./components/CountryList";
 import CreateCities from "./Pages/CreateCities";
 import CityDetails from "./components/CityDetails";
 import UpdateCities from "./Pages/UpdateCities";
-
+import AboutUs from "./components/AboutUs";
 
 function App() {
-
   // "/cities/edit/Stuttgart"
 
   const [countries, setCountries] = useState([]);
@@ -20,10 +19,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<CountryList setCountries={setCountries} />} />
-        <Route path="/countries/create" element={<CreateCities countries={countries} />} />
+        <Route
+          path="/countries/create"
+          element={<CreateCities countries={countries} />}
+        />
         <Route path="/countries/:name" element={<Citylist />} />
         <Route path="/cities/:cityId" element={<CityDetails />} />
         <Route path="/cities/edit/:cityId" element={<UpdateCities />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
       <Footer />
     </>
