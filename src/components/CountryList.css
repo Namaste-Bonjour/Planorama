@@ -36,9 +36,7 @@
 .description {
     margin: 20px;
 }
-/* CountryList.css */
 
-/* Container for the entire city details page */
 .city {
     font-size: 2rem;
     font-weight: bold;
@@ -65,7 +63,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Styling for landmarks, activities, and restaurants lists */
+ 
   label, ul {
     font-size: 1.1rem;
     margin-left: 20px;
@@ -88,14 +86,14 @@
     cursor: pointer;
   }
   
-  /* Styling for the best time to visit and budget sections */
+
   p {
     font-size: 1.1rem;
     color: #16a085;
     margin: 15px 0;
   }
   
-  /* Buttons styling */
+ 
   button {
     background-color: #3498db;
     color: white;
@@ -112,13 +110,12 @@
   button:hover {
     background-color: #2980b9;
   }
-  
-  /* Styling for the edit city button link */
+
   a {
     text-decoration: none;
   }
   
-  /* Centering the buttons */
+ 
   button + button {
     margin-top: 15px;
   }
