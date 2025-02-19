@@ -1,25 +1,27 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { API_URL } from "../config/api";
 import axios from "axios";
 
 
 function CityDetails() {
 
-    const { city } = useParams();
+    const { cityId } = useParams();
     const [cityDetails, setCityDetails] = useState(null);
     const navigate = useNavigate();
-   
+
     useEffect(() => {
         getCity();
-    }, [city]);
+    }, [cityId]);
 
 
     const getCity = () => {
         axios.get(`${API_URL}/cities.json`)
             .then((response) => {
                 const cityObj = response.data;
-              console.log(cityObj)
+
                 const cityArr = Object.keys(cityObj).map((id) => {
                     return {
                         id,
@@ -27,24 +29,24 @@ function CityDetails() {
                     };
                 });
 
-                const specificCity = cityArr.find(cityItem => cityItem.city.toLowerCase() === city.toLowerCase());
+                const specificCity = cityArr.find(cityItem => cityItem.city.toLowerCase() === cityId.toLowerCase());
 
                 if (specificCity) {
-                  return   setCityDetails(specificCity);
+                    return setCityDetails(specificCity);
                 } else {
                     console.log("City not found");
                 }
             })
             .catch((e) => console.log("No cities found", e));
     }
-    
+
 
     const deleteCity = () => {
-        console.log(cityDetails.id)
+
         axios.delete(`${API_URL}/cities/${cityDetails.id}.json`)
-      
-            .then(response => {
-                console.log(response.data)
+
+            .then(_response => {
+
                 navigate("/");
             })
             .catch(e => console.log("Error"));
@@ -55,7 +57,7 @@ function CityDetails() {
         return <p> Loading!!!!</p>
     }
 
-  
+
     const sortedActivities = cityDetails.activities
         .split(',')
         .map(activity => activity.trim())
@@ -81,7 +83,7 @@ function CityDetails() {
                     <li className="activity" key={i}>
                         {land}
                     </li>)
-            })}  </ul> 
+            })}  </ul>
             <ul><b> Activities: </b>{sortedActivities.map((elm, i) => {
                 return (
                     <li className="activity" key={i}>
@@ -89,18 +91,25 @@ function CityDetails() {
                     </li>)
 
             })}  </ul>
-            
+
             <p><b>Best Time to visit: </b> {cityDetails.time}</p>
             <ul><b> Restaurants: </b>{sortedRestaurants.map((food, i) => {
                 return (
                     <span className="activity" key={i}>
                         {food} <br />
                     </span>)
-            })} </ul> 
- <p>{cityDetails.image}</p>
- <p><b>Budget (per person): </b>{cityDetails.budget}</p>
-<Link to ="/"> <button> Back to Cities </button></Link>
-<button onClick={(deleteCity)} > Delete City </button>
+            })} </ul>
+            <div>
+                <img src={cityDetails.image} />
+            </div>
+
+            <p><b>Budget (per person): </b>{cityDetails.budget}</p>
+
+
+
+            <Link to={`/cities/edit/${cityId}`}> <button> Edit City</button> </Link>
+            <button onClick={(deleteCity)} > Delete City </button>
+
 
         </>
 
