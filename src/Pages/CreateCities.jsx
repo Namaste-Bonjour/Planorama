@@ -40,7 +40,7 @@ function CreateCities({ countries }) {
             image: image,
             budget: budget,
             latitude: latitude,
-            longitude : longitude
+            longitude: longitude
         };
 
 
@@ -161,7 +161,7 @@ function CreateCities({ countries }) {
                             value={longitude}
                             onChange={(e) => { setLongitude(e.target.value) }} />
                     </label>
-                    
+
                     <button> Create </button>
                 </form>
             </div>

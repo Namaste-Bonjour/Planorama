@@ -1,119 +1,149 @@
 .Country-List {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 50px;
-    opacity: 70%;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px;
+  opacity: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 100%;
+  height: 100%;
 }
 
 .card {
-    align-content: center;
-    box-shadow: rgb(147, 147, 170);
-    opacity: 100%;
-    background-color: none;
+  align-content: center;
+  box-shadow: rgb(147, 147, 170);
+  opacity: 100%;
+  background-color: none;
 
 }
 
 .card:hover {
-    color: #535bf2;
-    background-color: rgb(201, 173, 238);
+  color: #535bf2;
+  background-color: rgb(201, 173, 238);
 }
 
 .Country-List img {
-    width: 200px;
-    height: 200px;
-    opacity: 100%;
+  width: 200px;
+  height: 200px;
+  opacity: 100%;
 }
- 
+
 /*city page */
 .city {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2c3e50;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .description {
-    margin: 20px;
-    font-size: 20px;
-    font-style: italic;
-    color: #34495e;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
- 
-  label, ul {
-    font-size: 1.1rem;
-    margin-left: 20px;
-  }
-  
-  .Landmark ul, ul {
-    padding-left: 20px;
-  }
-  
-  .activity {
-    list-style-type: none;
-    margin-bottom: 5px;
-    font-size: 1rem;
-    color: #0c1ec4;
-    padding-left: 30px;
-  }
-  
-  .activity:hover {
-    color: #e74c3c;
-    cursor: pointer;
-  }
-  
-
-  p {
-    font-size: 1.1rem;
-    color: #a01682;
-    margin: 15px 0;
-  }
-  
- 
-  button {
-    background-color: #3498db;
-    color: white;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .Page{
-    display:flex;
-    flex-direction: row;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 20px;
 }
 
+.description {
+  margin: 20px;
+  font-size: 20px;
+  font-style: italic;
+  color: #34495e;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+label, ul {
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+.Landmark{
+  display:flex;
+
+}
+.Landmark ul, li {
+  padding-left: 10px;
+}
+
+.activity {
+  list-style-type: none;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #0c1ec4;
+  padding-left: 30px;
+}
+
+.activity:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+
+p {
+  font-size: 1.1rem;
+  color: #a01682;
+  margin: 15px 0;
+}
+
+
+button {
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Page{
+  display:flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .Country-List {
+      flex-wrap: wrap;
+      width: auto;
+      margin: 10px;
+      font-size: 14px;
+      grid-template-columns: auto auto;
+      background-color: rgb(180, 187, 180);
+  }
+}
+
+@media (max-width: 480px) {
+  .Country-List {
+      flex-wrap: wrap;
+      width: auto;
+      font-size: 14px;
+      grid-template-columns: auto;
+      background-color: rgb(180, 187, 180);
+  }
+}
+.Stay img{
+ width:5%;
+
+}
+.Stay label {
+  background-color: #34495e;
+}
 @media (max-width: 768px) {
     .Country-List {
         flex-wrap: wrap;

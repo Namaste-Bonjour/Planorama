@@ -1,15 +1,15 @@
 import CountryList from "../components/CountryList";
 
-function HomePage(){
+function HomePage() {
 
 
 
-    return(
-<>
+    return (
+        <>
 
-<h2>Explore</h2>
-<CountryList />
-</>
+            <h2>Explore</h2>
+            <CountryList />
+        </>
     );
 }
 
