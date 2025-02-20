@@ -4,10 +4,11 @@ import "./Create.css";
 import CreateCountries from "./CreateCountries";
 import axios from "axios";
 import { API_URL } from "../config/api";
+import Redirect from "../components/Redirect";
+import { Button } from "@mantine/core";
 
 
-
-function CreateCities({ countries }) {
+function CreateCities({ countries,user }) {
 
     const [city, setCity] = useState("");
     const [activities, setActivities] = useState("");
@@ -53,6 +54,8 @@ function CreateCities({ countries }) {
     };
     return (
         <>
+        {user ?
+            (<>
             <CreateCountries />
             <div className="CreateCities">
                 <h2> Add Cities </h2>
@@ -162,9 +165,14 @@ function CreateCities({ countries }) {
                             onChange={(e) => { setLongitude(e.target.value) }} />
                     </label>
 
-                    <button> Create </button>
+                   <Button variant="filled" color="violet" radius="md"> Create </Button>
                 </form>
             </div>
+            </>):
+            (<div>
+                <Redirect />
+            </div>)
+        }
         </>
 
 

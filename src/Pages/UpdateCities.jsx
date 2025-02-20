@@ -2,10 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom";
 import { API_URL } from "../config/api";
+import Redirect from "../components/Redirect";
+import { Button } from "@mantine/core";
 
 
-
-function UpdateCities({ countries }) {
+function UpdateCities({ countries, user }) {
 
     const [city, setCity] = useState("");
     const [activities, setActivities] = useState("");
@@ -84,6 +85,7 @@ function UpdateCities({ countries }) {
 
     return (
         <>
+        {user ?(
             <div className="EditCity">
 
                 <h2>Edit City details</h2>
@@ -193,10 +195,15 @@ function UpdateCities({ countries }) {
                             value={longitude}
                             onChange={(e) => { setLongitude(e.target.value) }} />
                     </label>
-
-                    <button> Update </button>
+                    <Button variant="filled" color="violet" radius="md"> Update 🔁 </Button>
+                   
                 </form>
-            </div>
+            </div>):
+            (<div>
+                <Redirect />
+            </div>)
+           
+            }
         </>
     )
 }

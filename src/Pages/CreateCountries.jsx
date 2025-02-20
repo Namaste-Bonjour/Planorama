@@ -2,14 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../config/api";
-import { MultiSelect } from '@mantine/core';
 import "./Create.css";
+import Redirect from "../components/Redirect";
 
 
 
 
-
-function CreateCountries() {
+function CreateCountries({user}) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [existingCountries, setExistingCountries] = useState([]);
@@ -20,6 +19,8 @@ function CreateCountries() {
     useEffect(() => {
         axios.get(`${API_URL}/countries.json`)
             .then((response) => {
+                
+    console.log(user);
                 const countryObj = response.data;
                 const countryArr = Object.keys(countryObj).map((id) => {
                     return {
@@ -55,9 +56,10 @@ function CreateCountries() {
 
     };
 
+
     return (
         <>
-            <div className="CreateCountries">
+        <div className="CreateCountries">
 
                 <h2> Add Country </h2>
                 {msg && <p className="error"> {msg}</p>}
@@ -84,9 +86,7 @@ function CreateCountries() {
                     <button> Create </button>
                 </form>
             </div>
-
-        </>
-
+</>
     )
 }
 

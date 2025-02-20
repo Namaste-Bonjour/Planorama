@@ -1,5 +1,3 @@
-
-
 import { useEffect } from "react";
 import { useState } from "react";
 import { API_URL } from "../config/api";

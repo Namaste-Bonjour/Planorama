@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { Button } from "@mantine/core";
 
 function navbar() {
   return (
@@ -8,16 +9,19 @@ function navbar() {
       <h1>Planorama</h1>
       <nav className="nav">
         <NavLink to="/">
-          <button>Home</button>
+        <Button variant="filled"color="grape">Home</Button>
         </NavLink>
         <NavLink to="/countries/create">
-          <button>Contribute</button>
+        <Button variant="filled"color="grape">Contribute</Button>
         </NavLink>
         <NavLink to="/CityRating">
-          <button>Rate a City</button>
+        <Button variant="filled"color="grape">Rate a City</Button>
         </NavLink>
         <NavLink to="/AboutUs">
-          <button>About us</button>
+        <Button variant="filled"color="grape">About us</Button>
+        </NavLink>
+        <NavLink to="/Authenticate" >
+        <Button variant="filled"color="grape">Login 👤</Button>
         </NavLink>
       </nav>
     </div>

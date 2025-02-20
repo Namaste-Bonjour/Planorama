@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { API_URL } from "../config/api";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import L from 'leaflet';
 import { Marker, Popup, MapContainer, TileLayer } from 'react-leaflet';
 import axios from "axios";
 import Load from "./Loader";
@@ -51,7 +50,6 @@ function Citylist() {
         const specificCountry = countryArr.find(cityItem => cityItem.name.toLowerCase() === name.toLowerCase());
         specificCountry.latitude = splitCoordinates(specificCountry.latitude);
         specificCountry.longitude = splitCoordinates(specificCountry.longitude);
-        console.log(specificCountry);
         setSelectedCountry(specificCountry);
       }).catch(e => console.log("Error", e));
 
@@ -72,7 +70,7 @@ function Citylist() {
 
     return (
       <div className="frame">
-        <MapContainer center={(selectedCountry) ?
+        <MapContainer className="map" center={(selectedCountry) ?
           [selectedCountry.latitude, selectedCountry.longitude] : [51.505, -0.09]
         }
           zoom={6}

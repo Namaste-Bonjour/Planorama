@@ -15,7 +15,7 @@
   box-shadow: rgb(147, 147, 170);
   opacity: 100%;
   background-color: none;
-  
+
 
 }
 
@@ -33,18 +33,20 @@
 
 /*city page */
 
-.Page{
-  display:flex;
-  margin-left:50px;
+.Page {
+  display: flex;
+  margin-left: 50px;
   margin-top: 60px;
-  gap:0;
+  gap: 0;
 }
-.Country-city{
+
+.Country-city {
   background-color: rgb(207, 179, 222);
   width: 200px;
   text-align: center;
   border-radius: 8px;
 }
+
 .card a:hover {
   color: #dc3ce7;
   font-size: larger;
@@ -79,140 +81,163 @@
 }
 
 /* Landmark and activities- Label 1 */
-.info{
-  width:1800px;
-  display:flex;
+.info {
+  width: 1600px;
+  display: flex;
   background-color: rgb(212, 201, 236);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin:20px;
-  gap:50px;
-  
+  margin: 0 0 20px 35px;
+  gap: 50px;
+
 }
-.land{
- width: 500px;
+
+.land {
+  width: 500px;
 }
-.activity{
+
+.activity {
   width: 1000px;
 }
-.info b , .moreDetails b{
+
+.info b,
+.moreDetails b {
   font-size: 20px;
   color: #333;
 }
 
-.land  li, .activity  li {
-   margin-bottom: 15px;
-    font-size: 20px;
+.land li,
+.activity li {
+  margin-bottom: 15px;
+  font-size: 20px;
   color: #0c1ec4;
 }
 
-.land :hover ,.activity :hover , .act :hover{
+.land :hover,
+.activity :hover,
+.act :hover {
   color: #dc3ce7;
   cursor: pointer;
 }
 
 
-/* Restaurant , time, budget- 2nd label */
+/* Restaurant , time, budget- Label 2 */
 
-.moreDetails{
-  display:flex;
-  margin-left: 400px;
+.moreDetails {
+  display: flex;
+  margin: 10px 0 0 250px;
   justify-content: center;
- gap:100px;
- width:1200px;
- background-color: rgb(158, 202, 204);
- padding: 20px;
- border-radius: 10px;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 100px;
+  width: 1200px;
+  background-color: rgb(158, 202, 204);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 p {
   font-size: 1.1rem;
   color: #a01682;
   margin-top: 0;
-  padding:20px ;
+  padding: 20px;
 }
 
 a {
   text-decoration: none;
   border-radius: 10px;
-  overflow:hidden;
-  padding:10px;
- 
+  overflow: hidden;
+  padding: 10px;
+
 }
+
 .act li {
-  width:300px;
+  width: 300px;
   margin-bottom: 15px;
   font-size: 20px;
   color: #0c1ec4;
-  }
+}
 
-  .time{
-    top:10px;
-  }
+.time {
+  top: 10px;
+}
 
-.Stay img{
-  width:10%;
+.Stay img {
+  width: 10%;
   border-radius: 8px;
-  
- }
 
- .Stay label {
- gap:20px;
- align-items: center;
- margin-top: 50px;
- }
- .Stay:hover{
+}
+
+.Stay label {
+  gap: 20px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.Stay:hover {
   background-color: #a5dc9b;
- }
+}
 
 
-.button{
- display:flex;
- justify-content: center;
- align-items: center;
- gap: 20px;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 
 .map-window {
   position: absolute;
   bottom: 20%;
-  top:20%;
+  top: 20%;
   left: 30%;
-  width: fit-content;
-  height: fit-content; /* Adjust as needed */
+   width: fit-content;
+  height: fit-content;
   background-color: #fff;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.frame{
-  width:1200px;
-  height:fit-content;
+.frame {
+  width: 1100px;
+  height: fit-content;
 }
 
 
 @media (max-width: 768px) {
-    .Country-List {
-        flex-wrap: wrap;
-        width: auto;
-        margin: 10px;
-        font-size: 14px;
-        grid-template-columns: auto auto;
-        background-color: rgb(180, 187, 180);
-    }
-    .city{
-      text-align:center ;
-    }
+  .Country-List {
+    flex-wrap: wrap;
+    width: auto;
+    margin: 10px;
+    font-size: 14px;
+    grid-template-columns: auto auto;
+    background-color: rgb(180, 187, 180);
+  }
+
+  .city {
+    text-align: center;
+  }
+  .Country-city{
+width:150px;
+margin: 0;
+padding:0;
+  }
+  .frame{
+    width: 500px;
+    height: 100px;
+  }
 }
 
 @media (max-width: 480px) {
-    .Country-List {
-        flex-wrap: wrap;
-        width: auto;
-        font-size: 14px;
-        grid-template-columns: auto;
-        background-color: rgb(180, 187, 180);
-    }
+  .Country-List {
+    flex-wrap: wrap;
+    width: auto;
+    font-size: 14px;
+    grid-template-columns: auto;
+    background-color: rgb(180, 187, 180);
+  }
+
+  .map{
+    width: 400px;
+  }
 }

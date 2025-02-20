@@ -3,11 +3,11 @@ import { useNavigate, Link, useParams } from "react-router-dom";
 import { API_URL } from "../config/api";
 import { Button } from '@mantine/core';
 import axios from "axios";
-import "./CountryList.css"
+import "./CountryList.css";
 import Load from "./Loader";
 
 
-function CityDetails() {
+function CityDetails({user}) {
     const { cityId } = useParams();
     const [cityDetails, setCityDetails] = useState(null);
     const navigate = useNavigate();
@@ -38,12 +38,15 @@ function CityDetails() {
     };
 
     const deleteCity = () => {
-        axios
+        user?
+        (axios
             .delete(`${API_URL}/cities/${cityDetails.id}.json`)
             .then(() => {
                 navigate("/");
             })
-            .catch((e) => console.log("Error"));
+            .catch((e) => console.log("Error"))):
+            (
+                navigate("/Login"));
     };
 
     if (cityDetails === null) {
@@ -59,7 +62,6 @@ function CityDetails() {
     };
 
     const sortedLandmark = sortedDetails(cityDetails.landmarks);
-    console.log(sortedLandmark);
     const sortedActivities = sortedDetails(cityDetails.activities);
     const sortedRestaurants = sortedDetails(cityDetails.restaurants);
 
@@ -119,9 +121,9 @@ function CityDetails() {
 
             <div className="button">
                 <Link to={`/cities/edit/${cityId}`}>
-                    <Button variant="filled" color="indigo" radius="md">Edit City </Button>  </Link>
+                    <Button variant="filled" color="indigo" radius="md">Edit City ✏️</Button>  </Link>
 
-                <Button variant="filled" color="red" onClick={(deleteCity)}>Delete City</Button>
+                <Button variant="filled" color="red" onClick={(deleteCity)}>Delete City 🗑️ </Button>
             </div>
         </>
 
