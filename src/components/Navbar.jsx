@@ -13,7 +13,10 @@ function navbar() {
         <NavLink to="/countries/create">
           <button>Contribute</button>
         </NavLink>
-        <NavLink to="/AboutUs" >
+        <NavLink to="/CityRating">
+          <button>Rate a City</button>
+        </NavLink>
+        <NavLink to="/AboutUs">
           <button>About us</button>
         </NavLink>
       </nav>

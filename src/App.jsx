@@ -9,10 +9,9 @@ import CreateCities from "./Pages/CreateCities";
 import CityDetails from "./components/CityDetails";
 import UpdateCities from "./Pages/UpdateCities";
 import AboutUs from "./Pages/AboutUs";
+import CityRating from "./Pages/CityRating";
 
 function App() {
-
-
   const [countries, setCountries] = useState(null);
   return (
     <>
@@ -25,8 +24,13 @@ function App() {
         />
         <Route path="/countries/:name" element={<Citylist />} />
         <Route path="/cities/:cityId" element={<CityDetails />} />
-        <Route path="/cities/edit/:cityId" element={<UpdateCities countries={countries} />} />
+        <Route
+          path="/cities/edit/:cityId"
+          element={<UpdateCities countries={countries} />}
+        />
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/CityRating" element={<CityRating />} />
+        <Route path="/CityRating/:cityName" element={<CityRating />} />
       </Routes>
       <Footer />
     </>
