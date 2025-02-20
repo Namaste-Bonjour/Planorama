@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { API_URL } from "../config/api";
 import "./Create.css";
 import Redirect from "../components/Redirect";
+import { Button } from "@mantine/core";
 
 
 
@@ -82,8 +83,8 @@ function CreateCountries({user}) {
                             onChange={(e) => { setImage(e.target.value) }} />
 
                     </label>
-
-                    <button> Create </button>
+<Button variant="filled" color="green">Create 🔧</Button>
+                    
                 </form>
             </div>
 </>
