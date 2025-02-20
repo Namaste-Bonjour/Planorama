@@ -105,9 +105,7 @@ function CityDetails() {
         <button>Edit City</button>
       </Link>
       <button onClick={deleteCity}>Delete City</button>
-      <Link to={`/CityRating/${cityDetails.city}`}>
-        <button>Rate this City</button>
-      </Link>
+      <Link to={`/CityRating/${cityDetails.city}`}></Link>
     </>
   );
 }

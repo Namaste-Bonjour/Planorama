@@ -30,7 +30,6 @@ function App() {
         />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/CityRating" element={<CityRating />} />
-        <Route path="/CityRating/:cityName" element={<CityRating />} />
       </Routes>
       <Footer />
     </>
