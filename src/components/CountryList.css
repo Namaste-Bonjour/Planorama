@@ -15,12 +15,14 @@
   box-shadow: rgb(147, 147, 170);
   opacity: 100%;
   background-color: none;
+  
 
 }
 
 .card:hover {
   color: #535bf2;
-  background-color: rgb(201, 173, 238);
+  background-color: rgb(238, 212, 173);
+  border-radius: 20px;
 }
 
 .Country-List img {
@@ -30,6 +32,25 @@
 }
 
 /*city page */
+
+.Page{
+  display:flex;
+  margin-left:50px;
+  margin-top: 60px;
+  gap:0;
+}
+.Country-city{
+  background-color: rgb(207, 179, 222);
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+.card a:hover {
+  color: #dc3ce7;
+  font-size: larger;
+}
+
+/*city details page */
 .city {
   font-size: 2rem;
   font-weight: bold;
@@ -40,7 +61,7 @@
 
 .description {
   margin: 20px;
-  font-size: 20px;
+  font-size: 24px;
   font-style: italic;
   color: #34495e;
   text-align: center;
@@ -57,93 +78,121 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-label, ul {
-  font-size: 1.1rem;
-  margin-left: 20px;
-}
-.Landmark{
+/* Landmark and activities- Label 1 */
+.info{
+  width:1800px;
   display:flex;
-
+  background-color: rgb(212, 201, 236);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:20px;
+  gap:50px;
+  
 }
-.Landmark ul, li {
-  padding-left: 10px;
+.land{
+ width: 500px;
+}
+.activity{
+  width: 1000px;
+}
+.info b , .moreDetails b{
+  font-size: 20px;
+  color: #333;
 }
 
-.activity {
-  list-style-type: none;
-  margin-bottom: 5px;
-  font-size: 1rem;
+.land  li, .activity  li {
+   margin-bottom: 15px;
+    font-size: 20px;
   color: #0c1ec4;
-  padding-left: 30px;
 }
 
-.activity:hover {
-  color: #e74c3c;
+.land :hover ,.activity :hover , .act :hover{
+  color: #dc3ce7;
   cursor: pointer;
 }
 
+
+/* Restaurant , time, budget- 2nd label */
+
+.moreDetails{
+  display:flex;
+  margin-left: 400px;
+  justify-content: center;
+ gap:100px;
+ width:1200px;
+ background-color: rgb(158, 202, 204);
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 p {
   font-size: 1.1rem;
   color: #a01682;
-  margin: 15px 0;
-}
-
-
-button {
-  background-color: #3498db;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 15px;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
+  margin-top: 0;
+  padding:20px ;
 }
 
 a {
   text-decoration: none;
+  border-radius: 10px;
+  overflow:hidden;
+  padding:10px;
+ 
 }
-
-.Page{
-  display:flex;
-  flex-direction: row;
-}
-
-@media (max-width: 768px) {
-  .Country-List {
-      flex-wrap: wrap;
-      width: auto;
-      margin: 10px;
-      font-size: 14px;
-      grid-template-columns: auto auto;
-      background-color: rgb(180, 187, 180);
+.act li {
+  width:300px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #0c1ec4;
   }
-}
 
-@media (max-width: 480px) {
-  .Country-List {
-      flex-wrap: wrap;
-      width: auto;
-      font-size: 14px;
-      grid-template-columns: auto;
-      background-color: rgb(180, 187, 180);
+  .time{
+    top:10px;
   }
-}
+
 .Stay img{
- width:5%;
+  width:10%;
+  border-radius: 8px;
+  
+ }
 
+ .Stay label {
+ gap:20px;
+ align-items: center;
+ margin-top: 50px;
+ }
+ .Stay:hover{
+  background-color: #a5dc9b;
+ }
+
+
+.button{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
 }
-.Stay label {
-  background-color: #34495e;
+
+
+.map-window {
+  position: absolute;
+  bottom: 20%;
+  top:20%;
+  left: 30%;
+  width: fit-content;
+  height: fit-content; /* Adjust as needed */
+  background-color: #fff;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.frame{
+  width:1200px;
+  height:fit-content;
+}
+
+
 @media (max-width: 768px) {
     .Country-List {
         flex-wrap: wrap;
@@ -152,6 +201,9 @@ a {
         font-size: 14px;
         grid-template-columns: auto auto;
         background-color: rgb(180, 187, 180);
+    }
+    .city{
+      text-align:center ;
     }
 }
 

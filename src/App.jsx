@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import React, { useState } from "react";
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Citylist from "./components/Citylist";
 import CountryList from "./components/CountryList";

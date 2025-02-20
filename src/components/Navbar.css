@@ -1,54 +1,63 @@
-.Navbar button:hover{
-    color: #535bf2;
-    background-color: aqua;
+.Navbar button:hover {
+  color: #535bf2;
+  background-color: aqua;
 }
 
-.Navbar h1{
-    font-family:sans-serif;
+.Navbar h1 {
+  font-family: sans-serif;
 }
-.Navbar{
-    display:flex;
-    margin: 0;
-    justify-content: space-around;
-   
-  }
-  .Navbar , h1{
-    background-color: rgb(0, 35, 100);
-    color: white;
-  
-  }
-  button{
-    margin-top:40px;
-    margin-right: 1px;
-    padding: 12px 30px;
-  font-size: 16px;
-  background-color: #d857ad;
+
+.Navbar {
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+
+}
+
+.Navbar,
+h1 {
+  background-color: rgb(0, 35, 100);
   color: white;
-  border: 2px solid #ff6f61;
+
+}
+
+Button {
+  margin-top: 40px;
+  margin-right: 1px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: 2px solid;
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: white;
+  color: #ff6f61;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+Loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    flex-wrap: wrap;
+    width: auto;
+    font-size: 14px;
   }
 
-  button:hover {
-    background-color: white;
-    color: #ff6f61;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    .Navbar {
-        flex-wrap: wrap;
-        width: auto;
-        font-size: 14px;
-    }
-    button{
-      margin-top:30px;
-      margin-right: auto;
-      padding: 10px 10px;
+  button {
+    margin-top: 30px;
+    margin-right: auto;
+    padding: 10px 10px;
     font-size: 16px;
     background-color: #d857ad;
     color: white;
@@ -58,5 +67,5 @@
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+  }
 }

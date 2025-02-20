@@ -6,7 +6,7 @@ import { API_URL } from "../config/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./CountryList.css";
-
+import Load from "./Loader";
 
 
 function CountryList({ setCountries }) {
@@ -29,7 +29,7 @@ useEffect(() => {
 },[setCountries]);
 
 if(country === null) {
-    return "Loading";
+    return <Load/>;
 }
 
     return (
