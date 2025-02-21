@@ -227,16 +227,16 @@ a {
     padding: 0;
   }
 
-  .Country-city a{
-    display:inline-flex;
+  .Country-city a {
+    display: inline-flex;
     justify-content: center;
     width: 150px;
-    height:80px;
+    height: 80px;
     font-size: 12px;
     font-weight: normal;
   }
 
-  label{
+  label {
     font-size: 10px;
     font-weight: normal;
   }
@@ -259,12 +259,37 @@ a {
   .map {
     width: 300px;
     height: 400px;
-    zoom:1;
+    zoom: 1;
   }
 
   .Country-city {
     width: auto;
     height: fit-content;
+  }
+
+  .info {
+    width: 700px;
+    margin: 0 0 20px 30px;
+    gap: 50px;
+  }
+
+  .land,
+  .activity {
+    width: 250px;
+  }
+  .button {
+    margin-left: 200px;
+    gap: 20px;
+  }
+  .moreDetails {
+    margin: 0px 80px;
+    gap: 20px;
+    width: 600px;
+    padding: 20px;
+  }
+
+  .Stay img {
+    width: 30%;
   }
 }
 
@@ -276,6 +301,7 @@ a {
     grid-template-columns: auto;
     background-color: rgb(180, 187, 180);
   }
+
   .map-window {
     position: fixed;
     bottom: 0;
@@ -284,6 +310,7 @@ a {
     width: fit-content;
     height: fit-content;
   }
+
   .map {
     width: 200px;
     height: 200px;
