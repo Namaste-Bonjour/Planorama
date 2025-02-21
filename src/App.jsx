@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Citylist from "./components/Citylist";
 import CountryList from "./components/CountryList";
@@ -23,14 +23,11 @@ function App() {
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
-      if (user) 
-      {
+      if (user) {
         setUser(user);
-      }
-      else
-      {
+      } else {
         setUser(null);
-      	localStorage.removeItem('user');
+        localStorage.removeItem("user");
       }
     });
   }, []);
@@ -43,19 +40,19 @@ function App() {
         <Route path="/" element={<CountryList setCountries={setCountries} />} />
         <Route
           path="/countries/create"
-          element={<CreateCities countries={countries} user={user}/>}
+          element={<CreateCities countries={countries} user={user} />}
         />
         <Route path="/countries/:name" element={<Citylist />} />
-        <Route path="/cities/:cityId" element={<CityDetails user={user}/>} />
+        <Route path="/cities/:cityId" element={<CityDetails user={user} />} />
         <Route
           path="/cities/edit/:cityId"
-          element={<UpdateCities countries={countries} user={user}/>}
+          element={<UpdateCities countries={countries} user={user} />}
         />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/CityRating" element={<CityRating />} />
         <Route path="/CityRating/:cityName" element={<CityRating />} />
-        <Route path="/Authenticate" element={<AuthStatus user={user}/>} />
-        <Route path="/Login" element={<LoginForm user={user}/>} />
+        <Route path="/Authenticate" element={<AuthStatus user={user} />} />
+        <Route path="/Login" element={<LoginForm user={user} />} />
         <Route path="/Logout" element={<Logout />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
