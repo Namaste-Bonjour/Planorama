@@ -130,7 +130,6 @@ function CityDetails({user}) {
 
     )
 
-<<<<<<< HEAD
   return (
     <>
       <h2 className="city">
@@ -181,7 +180,5 @@ function CityDetails({user}) {
       <Link to={`/CityRating/${cityDetails.city}`}></Link>
     </>
   );
-=======
->>>>>>> 9b37c572038918e97bf144896b74c512caf973ab
 }
 export default CityDetails;
