@@ -47,8 +47,7 @@ Planorama is a travel planner web application that allows users to plan their tr
 
 ## **Authors**
 
-Sébastien
-Anjanaa
+Sébastien & Anjana
 
 ## **Resources**
 
@@ -56,3 +55,4 @@ Anjanaa
 - **Wikipedia**
 - **MDN**
 - **ChatGPT(for the description of some city)**
+- **Freepik**
