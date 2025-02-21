@@ -17,7 +17,7 @@ function Citylist() {
 
   const customIcon = new L.Icon({
     iconUrl: '/Leaflet/marker-icon.png', // specify the path to your marker image file
-    iconSize: [32, 32], // size of the marker icon
+    iconSize: [25, 41], // size of the marker icon
     iconAnchor: [16, 32], // point of the icon which will correspond to marker's location
     popupAnchor: [0, -32], // point from which the popup should open
   });
