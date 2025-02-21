@@ -15,6 +15,14 @@ function Citylist() {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const { name } = useParams();
 
+  const customIcon = new L.Icon({
+    iconUrl: '/Leaflet/marker-icon.png', // specify the path to your marker image file
+    iconSize: [25, 41], // size of the marker icon
+    iconAnchor: [16, 32], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -32], // point from which the popup should open
+  });
+
+
   const splitCoordinates = (str) => {
     const ustr = str.split("°");
     ustr[1] = ustr[1].trim();
@@ -81,7 +89,7 @@ function Citylist() {
               country === name && (
                 groupedCities[country].map((location) => (
                   ((location.longitude) && (location.latitude) && (
-                    <Marker key={location.id} position={[splitCoordinates(location.latitude), splitCoordinates(location.longitude)]}>
+                    <Marker key={location.id} position={[splitCoordinates(location.latitude), splitCoordinates(location.longitude)]}  icon={customIcon}>
                       {/* Popup that appears when the marker is clicked */}
                       <Popup><h3 >{location.city}</h3>
                         <Link to={`/cities/${location.city}`}>
