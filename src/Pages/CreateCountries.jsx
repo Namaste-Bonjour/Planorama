@@ -103,7 +103,7 @@ function CreateCountries({user}) {
                     </label>
 
 
-<Button variant="filled" color="green">Create 🔧</Button>
+<Button type= "submit" variant="filled" color="green">Create 🔧</Button>
                     
                 </form>
             </div>

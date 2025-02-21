@@ -165,7 +165,7 @@ function CreateCities({ countries,user }) {
                             onChange={(e) => { setLongitude(e.target.value) }} />
                     </label>
 
-                   <Button variant="filled" color="green" > Create 🔧 </Button>
+                   <Button type= "submit" variant="filled" color="green" > Create 🔧 </Button>
                 </form>
             </div>
             </>):
