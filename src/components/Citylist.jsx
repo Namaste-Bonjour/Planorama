@@ -11,7 +11,7 @@ import 'leaflet/dist/leaflet.css';
 import { Button } from "@mantine/core";
 
 function Citylist() {
-  const [cities, setCities] = useState(null);
+  const [cities, setCities] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const { name } = useParams();
 
@@ -93,7 +93,7 @@ function Citylist() {
                       {/* Popup that appears when the marker is clicked */}
                       <Popup><h3 >{location.city}</h3>
                         <Link to={`/cities/${location.city}`}>
-                        <Button variant="filled" color="green">More Details...</Button></Link>
+                        <Button variant ="filled" color="green">More Details...</Button></Link>
                       </Popup>
                     </Marker>
                   ))
@@ -119,7 +119,7 @@ function Citylist() {
                
                   {groupedCities[country].map((cityDetails) => (
                    <div className="card" key={cityDetails.id}>
-                      <Link classname="City-card" to={`/cities/${cityDetails.city}`}>
+                      <Link className="City-card" to={`/cities/${cityDetails.city}`}>
                         <h3>{cityDetails.city}</h3>  </Link>
                     </div>
                   ))}

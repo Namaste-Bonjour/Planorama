@@ -6,8 +6,6 @@ function HomePage() {
 
     return (
         <>
-
-            <h2>Explore</h2>
             <CountryList />
         </>
     );

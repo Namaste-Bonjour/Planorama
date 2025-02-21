@@ -195,7 +195,7 @@ function UpdateCities({ countries, user }) {
                             value={longitude}
                             onChange={(e) => { setLongitude(e.target.value) }} />
                     </label>
-                    <Button variant="filled" color="violet" radius="md"> Update 🔁 </Button>
+                    <Button type= "submit" variant="filled" color="violet" radius="md"> Update 🔁 </Button>
                    
                 </form>
             </div>):

@@ -59,7 +59,6 @@ function App() {
         <Route path="/Logout" element={<Logout />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
-      <Footer />
     </>
   );
 }
