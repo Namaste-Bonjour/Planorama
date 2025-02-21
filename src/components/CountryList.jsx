@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
+=======
+import { useEffect } from "react";
+import { useState } from "react";
+>>>>>>> 9b37c572038918e97bf144896b74c512caf973ab
 import { API_URL } from "../config/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./CountryList.css";
+<<<<<<< HEAD
+=======
+import Load from "./Loader";
+
+>>>>>>> 9b37c572038918e97bf144896b74c512caf973ab
 
 function CountryList({ setCountries }) {
   const [countries, setCountriesData] = useState(null);
@@ -23,6 +33,7 @@ function CountryList({ setCountries }) {
       .catch((e) => console.log("Error", e));
   }, [setCountries]);
 
+<<<<<<< HEAD
   if (countries === null) {
     return "Loading";
   }
@@ -63,6 +74,10 @@ function CountryList({ setCountries }) {
       </div>
     </>
   );
+=======
+if(country === null) {
+    return <Load/>;
+>>>>>>> 9b37c572038918e97bf144896b74c512caf973ab
 }
 
 export default CountryList;
