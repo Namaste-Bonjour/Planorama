@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./CountryList.css";
+import { Button } from '@mantine/core';
 
-function Register({setAuthenticated}) {
+function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  const auth = getAuth();
+
+
   const handleResgistration = async (e) => {
     e.preventDefault();
     const auth = getAuth();
@@ -17,10 +19,12 @@ function Register({setAuthenticated}) {
     // Signed up 
     const user = userCredential.user;
     navigate("/");
-    // ...
   })
   . catch((error)=>{
       setError(error.message);
+      console.log(error);
+      alert(error.message);
+      navigate("/");
     });
   };
 
@@ -38,7 +42,8 @@ function Register({setAuthenticated}) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-       <Button variant="filled" color="violet" radius="md">Register 👤➕</Button>
+      
+       <Button type="submit" variant="filled" color="violet" radius="md">Register 👤➕</Button>
       {error && <p>{error}</p>}
     </form>
   );

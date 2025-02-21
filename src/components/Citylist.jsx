@@ -8,6 +8,7 @@ import axios from "axios";
 import Load from "./Loader";
 import "./CountryList.css";
 import 'leaflet/dist/leaflet.css';
+import { Button } from "@mantine/core";
 
 function Citylist() {
   const [cities, setCities] = useState(null);
@@ -73,8 +74,7 @@ function Citylist() {
         <MapContainer className="map" center={(selectedCountry) ?
           [selectedCountry.latitude, selectedCountry.longitude] : [51.505, -0.09]
         }
-          zoom={6}
-          style={{ width: '100%', height: '700px' }}>
+          zoom={6}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {
             Object.keys(groupedCities).map((country) => (
@@ -84,7 +84,8 @@ function Citylist() {
                     <Marker key={location.id} position={[splitCoordinates(location.latitude), splitCoordinates(location.longitude)]}>
                       {/* Popup that appears when the marker is clicked */}
                       <Popup><h3 >{location.city}</h3>
-                        <Link to={`/cities/${location.city}`}><button>More Details...</button></Link>
+                        <Link to={`/cities/${location.city}`}>
+                        <Button variant="filled" color="green">More Details...</Button></Link>
                       </Popup>
                     </Marker>
                   ))
@@ -110,7 +111,7 @@ function Citylist() {
                
                   {groupedCities[country].map((cityDetails) => (
                    <div className="card" key={cityDetails.id}>
-                      <Link to={`/cities/${cityDetails.city}`}>
+                      <Link classname="City-card" to={`/cities/${cityDetails.city}`}>
                         <h3>{cityDetails.city}</h3>  </Link>
                     </div>
                   ))}

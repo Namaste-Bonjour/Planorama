@@ -23,7 +23,8 @@ function LoginForm({ user }) {
       navigate("/");
       // ...
     }).catch ((error)=> {
-      setError(error.message); 
+      alert(error.message); 
+      setError(error.message);
       navigate("/Register");
     });
   };

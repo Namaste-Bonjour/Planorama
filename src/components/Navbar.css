@@ -67,6 +67,7 @@ Loader {
     flex-wrap: wrap;
     width: auto;
     font-size: 14px;
+    justify-content: center;
   }
 
   button {

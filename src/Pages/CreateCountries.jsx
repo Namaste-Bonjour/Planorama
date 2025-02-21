@@ -12,6 +12,8 @@ import { Button } from "@mantine/core";
 function CreateCountries({user}) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
+    const [latitude, setLatitude] =useState("");
+    const [longitude, setLongitude] =useState("");
     const [existingCountries, setExistingCountries] = useState([]);
     const [msg, setMsg] = useState("");
     const navigate = useNavigate();
@@ -46,7 +48,9 @@ function CreateCountries({user}) {
 
         const newCountry = {
             name: name,
-            image: image
+            image: image,
+            latitude:latitude,
+            longitude:longitude
         };
 
         axios.post(`${API_URL}/countries.json`, newCountry)
@@ -72,7 +76,6 @@ function CreateCountries({user}) {
                             placeholder="Enter country name"
                             value={name}
                             onChange={(e) => { setName(e.target.value) }} />
-
                     </label>
 
                     <label> Image :
@@ -81,8 +84,25 @@ function CreateCountries({user}) {
                             placeholder="Enter image URL"
                             value={image}
                             onChange={(e) => { setImage(e.target.value) }} />
-
                     </label>
+
+                    <label> Latitude :
+                        <input type="text"
+                            name="latitude"
+                            placeholder="Enter latitude of the country "
+                            value={latitude}
+                            onChange={(e) => { setLatitude(e.target.value) }} />
+                    </label>
+
+                    <label> Longitude :
+                        <input type="text"
+                            name="longitude"
+                            placeholder="Enter longitude of the country "
+                            value={latitude}
+                            onChange={(e) => { setLongitude(e.target.value) }} />
+                    </label>
+
+
 <Button variant="filled" color="green">Create 🔧</Button>
                     
                 </form>

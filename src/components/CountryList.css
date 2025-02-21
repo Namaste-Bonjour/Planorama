@@ -148,7 +148,6 @@ a {
   border-radius: 10px;
   overflow: hidden;
   padding: 10px;
-
 }
 
 .act li {
@@ -192,7 +191,7 @@ a {
   bottom: 20%;
   top: 22%;
   left: 30%;
-   width: fit-content;
+  width: fit-content;
   height: fit-content;
   background-color: #fff;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
@@ -203,6 +202,10 @@ a {
   height: fit-content;
 }
 
+.map {
+  width: 100%;
+  height: 700px;
+}
 
 @media (max-width: 768px) {
   .Country-List {
@@ -217,14 +220,51 @@ a {
   .city {
     text-align: center;
   }
-  .Country-city{
-width:150px;
-margin: 0;
-padding:0;
+
+  .Country-city {
+    width: 150px;
+    margin: 0;
+    padding: 0;
   }
-  .frame{
-    width: 500px;
-    height: 100px;
+
+  .Country-city a{
+    display:inline-flex;
+    justify-content: center;
+    width: 150px;
+    height:80px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  label{
+    font-size: 10px;
+    font-weight: normal;
+  }
+
+  .map-window {
+    position: fixed;
+    bottom: 20%;
+    top: 50%;
+    left: 40%;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .frame {
+    top: 30%;
+    width: 0;
+    height: 0;
+  }
+
+  .map {
+    width: 300px;
+    height: 400px;
+    zoom:1;
+  }
+
+  .Country-city {
+    width: auto;
+    height: fit-content;
   }
 }
 
@@ -236,8 +276,16 @@ padding:0;
     grid-template-columns: auto;
     background-color: rgb(180, 187, 180);
   }
-
-  .map{
-    width: 400px;
+  .map-window {
+    position: fixed;
+    bottom: 0;
+    top: 60%;
+    left: 50%;
+    width: fit-content;
+    height: fit-content;
+  }
+  .map {
+    width: 200px;
+    height: 200px;
   }
 }
