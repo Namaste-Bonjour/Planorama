@@ -72,8 +72,9 @@ Loader {
     justify-content: center;
   }
 
-  .Navbar h1 {
-    justify-content: center;
+
+  .title{
+    margin-right: 360px;
   }
 
   button {

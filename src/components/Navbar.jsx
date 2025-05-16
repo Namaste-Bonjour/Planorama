@@ -6,7 +6,8 @@ import { Button } from "@mantine/core";
 function navbar() {
   return (
     <div className="Navbar">
-      <h1>Planorama</h1>
+      <div className="title-wrapper">
+      <h1 className="title">Planorama</h1></div>
       <nav className="nav">
         <NavLink to="/">
         <Button variant="filled"color="grape">Home</Button>
