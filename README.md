@@ -56,3 +56,6 @@ Sébastien & Anjana
 - **MDN**
 - **ChatGPT(for the description of some city)**
 - **Freepik**
+
+## **Demo** 
+https://planorama-travelplanner.netlify.app/
