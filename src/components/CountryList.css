@@ -48,7 +48,7 @@
 }
 
 .card a:hover {
-  color: #dc3ce7; 
+  color: #dc3ce7;
   font-size: larger;
 }
 
@@ -160,13 +160,14 @@ a {
 .time {
   top: 10px;
 }
+
 .Stay img {
   width: 10%;
   border-radius: 8px;
- }
+}
 
 .Stay label {
-   align-items: center;
+  align-items: center;
   margin-top: 50px;
 }
 
@@ -215,10 +216,9 @@ a {
     background-color: rgb(180, 187, 180);
   }
 
-  .city {
-    text-align: center;
-  }
-
+.city-wrapper {
+ width:550px;
+}
   .Country-city {
     width: 150px;
     margin: 0;
@@ -264,28 +264,32 @@ a {
     width: auto;
     height: fit-content;
   }
-.description{
-  width:650px;
-}
 
-.image{
-  width:600px;
-  margin-right: 110px;
-}
+  .description {
+    width: 450px;
+  }
+
+  .image {
+    width: 450px;
+    margin-left: 35px;
+  }
+
   .info {
-    width: 700px;
+    width: 460px;
     margin: 0 0 20px 30px;
     gap: 50px;
   }
 
   .land,
   .activity {
-    width: 250px;
+    width: 180px;
   }
+
   .button {
     margin-left: 200px;
     gap: 20px;
   }
+
   .moreDetails {
     margin: 0px 80px;
     gap: 20px;

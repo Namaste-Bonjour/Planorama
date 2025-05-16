@@ -6,7 +6,7 @@
 
 .Navbar h1 {
   font-family: sans-serif;
-  margin-left:30%;
+  margin-left: 30%;
 }
 
 .Navbar {
@@ -21,7 +21,7 @@ h1 {
   background-color: rgb(0, 35, 100);
   color: white;
   text-align: center;
-  
+
 
 }
 
@@ -37,12 +37,12 @@ Button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.userInfo{
+.userInfo {
 
   color: white;
   font-size: 1rem;
-  height:20px;
-  width:10px;
+  height: 20px;
+  width: 10px;
   border: none;
   cursor: pointer;
   margin-top: 15px;
@@ -64,15 +64,18 @@ Loader {
 }
 
 @media (max-width: 768px) {
+
   .Navbar {
     flex-wrap: wrap;
-    width: auto;
+    width: 550px;
     font-size: 14px;
     justify-content: center;
   }
-.Navbar h1{
-margin-right: 200px;
-}
+
+  .Navbar h1 {
+    justify-content: center;
+  }
+
   button {
     margin-top: 30px;
     margin-right: auto;

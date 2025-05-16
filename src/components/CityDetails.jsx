@@ -67,7 +67,8 @@ function CityDetails({user}) {
 
     return (
 
-        <>
+      
+        <div className="city-wrapper">
             <h2 className="city"><i> {cityDetails.city} </i> </h2>
             <p className="description"><b>{cityDetails.description}</b></p>
 
@@ -125,7 +126,7 @@ function CityDetails({user}) {
 
                 <Button variant="filled" color="red" onClick={(deleteCity)}>Delete City 🗑️ </Button>
             </div>
-        </>
+        </div>
 
 
     )
