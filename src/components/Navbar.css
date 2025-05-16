@@ -70,7 +70,9 @@ Loader {
     font-size: 14px;
     justify-content: center;
   }
-
+.Navbar h1{
+margin-right: 200px;
+}
   button {
     margin-top: 30px;
     margin-right: auto;

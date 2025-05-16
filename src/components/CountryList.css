@@ -48,7 +48,7 @@
 }
 
 .card a:hover {
-  color: #dc3ce7;
+  color: #dc3ce7; 
   font-size: larger;
 }
 
@@ -160,21 +160,19 @@ a {
 .time {
   top: 10px;
 }
-
 .Stay img {
   width: 10%;
   border-radius: 8px;
-
-}
+ }
 
 .Stay label {
-  gap: 20px;
-  align-items: center;
+   align-items: center;
   margin-top: 50px;
 }
 
 .Stay:hover {
-  background-color: #a5dc9b;
+  background-color: #1b8bb8;
+  border-radius: 30px;
 }
 
 
