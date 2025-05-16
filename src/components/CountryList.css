@@ -264,7 +264,14 @@ a {
     width: auto;
     height: fit-content;
   }
+.description{
+  width:650px;
+}
 
+.image{
+  width:600px;
+  margin-right: 110px;
+}
   .info {
     width: 700px;
     margin: 0 0 20px 30px;
