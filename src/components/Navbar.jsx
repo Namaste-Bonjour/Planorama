@@ -7,7 +7,7 @@ import logo from "../assets/logo.png";
 function navbar() {
   return (
     <div className="Navbar">
-     <img src={logo} classname= "logo"></img>
+     <img src={logo} alt="Planorama logo" className="logo" />
       <div className="title-wrapper">
    
       <h1 className="title">Planorama</h1></div>
