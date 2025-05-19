@@ -2,11 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "@mantine/core";
+import logo from "../assets/logo.png";
 
 function navbar() {
   return (
     <div className="Navbar">
+     <img src={logo} classname= "logo"></img>
       <div className="title-wrapper">
+   
       <h1 className="title">Planorama</h1></div>
       <nav className="nav">
         <NavLink to="/">
