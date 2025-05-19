@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "@mantine/core";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.gif";
 
 function navbar() {
   return (
