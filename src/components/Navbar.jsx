@@ -16,6 +16,7 @@ function navbar() {
       &#9776; {/* Unicode for ☰ */}
     </button></div>
       <nav className={`nav ${isMenuOpen ? "show" : ""}`}>
+        <div className="button">
         <NavLink to="/">
         <Button variant="filled"color="grape">Home</Button>
         </NavLink>
@@ -31,6 +32,7 @@ function navbar() {
         <NavLink to="/Authenticate" >
         <Button variant="filled"color="grape">Login 👤</Button>
         </NavLink>
+        </div>
       </nav>
     </div>
   );
