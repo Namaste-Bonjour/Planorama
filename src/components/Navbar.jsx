@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "@mantine/core";
 import logo from "../assets/logo1.gif";
 
 function navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
   return (
     <div className="Navbar">
+      <div className="brand">
      <img src={logo} alt="Planorama logo" className="logo" />
-      <div className="title-wrapper">
-   
-      <h1 className="title">Planorama</h1></div>
-      <nav className="nav">
+      <h1 className="title">Planorama</h1><button className="burger" onClick={toggleMenu}>
+      &#9776; {/* Unicode for ☰ */}
+    </button></div>
+      <nav className={`nav ${isMenuOpen ? "show" : ""}`}>
         <NavLink to="/">
         <Button variant="filled"color="grape">Home</Button>
         </NavLink>
