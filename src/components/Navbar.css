@@ -76,8 +76,8 @@ Loader {
   .Navbar {
     display: flex;
     flex-direction: column;
-    width: 100%; 
-    height:100%;
+    width: 100%;
+    height: 100%;
     font-size: 14px;
     gap: 5px;
     position: relative;
@@ -110,16 +110,16 @@ Loader {
     width: 100%;
     padding: 10px;
     position: absolute;
-    top: 60%; 
+    top: 60%;
     left: 0;
     z-index: 1000;
-     transition: max-height 0.3s ease;
-  overflow: hidden;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
   }
 
   .nav.show {
     display: flex;
-  overflow-y: auto;
+    overflow-y: auto;
   }
 
   button {
@@ -127,6 +127,80 @@ Loader {
     margin-top: 10px;
     width: 100%;
     overflow: hidden;
-    gap:1px;
+    gap: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: visible;
+    height: auto;
+  }
+
+  .brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+    flex-grow: 1;
+  }
+
+  .burger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1px 0;
+    position: static;
+    overflow: visible;
+    height: auto;
+  }
+
+  .nav.show {
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+  }
+
+  button {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    padding: 1px;
+    font-size: 16px;
+    background-color: #d857ad;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
   }
 }
