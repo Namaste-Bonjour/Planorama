@@ -1,38 +1,40 @@
-.Navbar button:hover {
-
-  background-color: rgb(189, 109, 18);
-
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ background-color: rgb(0, 35, 100);
 }
+
+.Navbar button:hover {
+  background-color: rgb(189, 109, 18);
+}
+
 .logo {
   width: 100px;
   height: 100px;
   border-radius: 30px;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .Navbar h1 {
   font-family: sans-serif;
-  margin-left: 30%;
-}
-
-.Navbar {
-  display: flex;
-  margin: 0;
-  justify-content: space-around;
-
-}
-
-.Navbar,
-h1 {
-  background-color: rgb(0, 35, 100);
-  color: white;
+    color: white;
   text-align: center;
-
-
 }
 
+.brand{
+  display:flex;
+  gap:0;
+}
+.burger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 Button {
-  margin-top: 40px;
+  margin-top: 50px;
   padding: 12px 30px;
   font-size: 16px;
   border: 2px solid;
@@ -73,24 +75,32 @@ Loader {
 
   .Navbar {
     flex-wrap: wrap;
-    width: 800px;
+    width: 650px;
     font-size: 14px;
-    justify-content: center;
-    height: 150px;
-  }
-.logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 30px;
-  margin-top:30px;
-}
-  .title{
-    margin-right: 360px;
+    height: 220px;
   }
 
-  button {
+  .logo {
+    width: 100px;
+    height: 100px;
     margin-top: 30px;
-    margin-right: auto;
+  }
+.nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+  /*button {
+    margin-top: 30px;
     padding: 10px 10px;
     font-size: 16px;
     background-color: #d857ad;
@@ -102,4 +112,4 @@ Loader {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-}
+*/
