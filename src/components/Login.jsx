@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import './Authentication.css';
 import { Button } from '@mantine/core';
@@ -16,45 +16,51 @@ function LoginForm({ user }) {
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      user = userCredential.user;
-      alert('User logged in successfully!');
-      navigate("/");
-      // ...
-    }).catch ((error)=> {
-      alert(error.message); 
-      setError(error.message);
-      navigate("/Register");
-    });
+      .then((userCredential) => {
+        // Signed in 
+        user = userCredential.user;
+        alert('User logged in successfully!');
+        navigate("/");
+        // ...
+      }).catch((error) => {
+        alert(error.message);
+        setError(error.message);
+        navigate("/Register");
+      });
   };
 
   return (
-  <div className='Login'>
-    <form onSubmit={Login}>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-      />
-      
-      
-       <Button type="submit" variant="filled" color="violet" radius="md"> Login 🔒🗝️</Button>
-     
-      {error && (
-        <div>
-        <p>{error}
-        </p>
-        </div>)
-      }
-    </form>
+    <div className='Login'>
+      <form onSubmit={Login}>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+        />
+
+
+        <Button type="submit" variant="filled" color="violet" radius="md"> Login 🔒🗝️</Button>
+
+        {error && (
+          <div>
+            <p>{error}
+            </p>
+          </div>)
+        }
+      </form>
+      <p className='signup'>
+        New here?{' '}
+        <NavLink to="/Register">
+          <Button type="submit" variant="filled" color="violet" radius="md">Sign up</Button>
+        </NavLink>
+      </p>
     </div>
   );
 }
