@@ -211,5 +211,12 @@ label {
 
   .About .info, .About ul {
     padding-left: 10px; 
+    padding-right:30px;
+}
+.info {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:600px;
 }
 }

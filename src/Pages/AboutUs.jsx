@@ -26,7 +26,7 @@ function AboutUs() {
         <ul>
           <li> <b> Destinations: </b> Find cities around the world and learn about what makes them unique. </li>
           <li> <b> Activities: </b> Explore fun and exciting things to do in each city, whether you're looking for adventure, relaxation, or cultural immersion. </li>
-          <li> <b>Landmarks:</b>Check out the must-see spots that will leave you in awe.  </li>
+          <li> <b>Landmarks:</b> Check out the must-see spots that will leave you in awe.  </li>
           <li> <b>Restaurants: </b>Savor the best local cuisine by discovering top-rated places to eat.  </li>
           <li> <b>Budgeting: </b>Plan your trip within your budget with personalized price recommendations.  </li>
           <li> <b>Best Times to Visit: </b>Know when to go to make the most of your trip, with information on ideal seasons.  </li>
