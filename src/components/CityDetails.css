@@ -50,3 +50,86 @@ ul {
   color: #dc3ce7;
   cursor: pointer;
 }
+
+/* Restaurant , time, budget- Label 2 */
+
+.moreDetails {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between children */
+  flex-wrap: wrap; /* Allows wrap on smaller screens */
+  margin: 20px auto; /* Centers the box */
+  width: 1000px;
+  background-color: rgb(158, 202, 204);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  flex: 1;
+  min-width: 300px;
+}
+.time div {
+  font-size: 1.1rem;
+  color: #a01682;
+  margin-top: 0;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.act li {
+  width: 300px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #0c1ec4;
+}
+
+.time {
+  top: 10px;
+}
+
+.Stay {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.Stay img {
+  width: 80px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Only apply hover effect on the icons */
+.Stay img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.Stay a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.Stay a:hover {
+  background-color: #1b2bb8;
+}
+
+.button {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
