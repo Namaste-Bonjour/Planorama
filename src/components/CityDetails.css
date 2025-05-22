@@ -1,0 +1,52 @@
+.info {
+  display: flex;
+  justify-content: center; /* Or use 'center' if you want side-by-side centered content */
+  flex-wrap: wrap; /* Allows wrap on smaller screens */
+  max-width: 1600px;
+  width: 90%;
+  margin: 20px auto; /* Centers the box */
+  padding: 10px;
+  background-color: #d3c2f3; /* Adjust as needed */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info label {
+  width: 48%;
+}
+.land {
+  width: 500px;
+}
+
+.activity {
+  width: 750px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.info b,
+.moreDetails b {
+    font-size: 20px;
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #0c1ec4;
+}
+
+.land li,
+.activity li {
+    margin-bottom: 15px;
+}
+
+.land :hover,
+.activity :hover,
+.act :hover {
+    color: #dc3ce7;
+    cursor: pointer;
+}

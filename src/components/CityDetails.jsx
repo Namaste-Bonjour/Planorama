@@ -4,6 +4,7 @@ import { API_URL } from "../config/api";
 import { Button } from '@mantine/core';
 import axios from "axios";
 import "./CountryList.css";
+import "./CityDetails.css";
 import Load from "./Loader";
 
 
@@ -82,8 +83,7 @@ function CityDetails({user}) {
                             <li > {land} </li>);
                     })}  </ul>
                 </label>
-                <label>
-                    <b> Activities: </b>
+                <label><b> Activities: </b>
                     <ul className="activity" > {sortedActivities.map((elm, i) => {
                         return (
                             <li >
