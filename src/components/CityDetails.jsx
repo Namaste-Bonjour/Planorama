@@ -122,9 +122,9 @@ function CityDetails({ user }) {
 
       <div className="button">
         <Link to={`/cities/edit/${cityId}`}>
-          <Button variant="filled" color="indigo" radius="md">Edit City ✏️</Button>  </Link>
+          <Button variant="filled" color="indigo" size="xl" radius="md">Edit City ✏️</Button>  </Link>
 
-        <Button variant="filled" color="red" onClick={(deleteCity)}>Delete City 🗑️ </Button>
+        <Button variant="filled" color="red" size="xl" radius="md" onClick={(deleteCity)}>Delete City 🗑️ </Button>
       </div>
     </>
 
