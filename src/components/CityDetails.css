@@ -1,35 +1,19 @@
 .info {
-<<<<<<< HEAD
   display: flex;
-  justify-content: center; /* Or use 'center' if you want side-by-side centered content */
+  justify-content: center; /* Or use 'space-betwwen' for side-by-side centered content */
   flex-wrap: wrap; /* Allows wrap on smaller screens */
   max-width: 1600px;
   width: 90%;
   margin: 20px auto; /* Centers the box */
   padding: 10px;
-  background-color: #d3c2f3; /* Adjust as needed */
+  background-color: #d3c2f3; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-=======
- 
-  display: flex;
-  justify-content:space-between; /* Or use 'center' if needed side-by-side centered content */
-  flex-wrap: wrap; /* Allows wrap on smaller screens */
-  max-width: 1200px;
-  width: 90%;
-  margin: 20px auto; /* Centers the box */
-  padding: 40px;
-   background-color: rgb(212, 201, 236);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-
->>>>>>> beb36fe53cf1aa7fa6bcaebb34f941a98fda4e37
 }
 
 .info label {
   width: 48%;
 }
-<<<<<<< HEAD
 .land {
   width: 500px;
 }
@@ -58,35 +42,11 @@ ul {
 .land li,
 .activity li {
     margin-bottom: 15px;
-=======
-
-.info b,
-.moreDetails b {
-  font-size: 20px;
-  color: #333;
-}
-
-
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-    font-size: 18px;
-     color: #0c1ec4;
-}
-.land li,
-.activity li {
-  margin-bottom: 15px;
->>>>>>> beb36fe53cf1aa7fa6bcaebb34f941a98fda4e37
 }
 
 .land :hover,
 .activity :hover,
 .act :hover {
-<<<<<<< HEAD
-    color: #dc3ce7;
-    cursor: pointer;
-=======
   color: #dc3ce7;
   cursor: pointer;
->>>>>>> beb36fe53cf1aa7fa6bcaebb34f941a98fda4e37
 }
