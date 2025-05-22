@@ -8,128 +8,128 @@ import "./CityDetails.css";
 import Load from "./Loader";
 
 
-function CityDetails({user}) {
-    const { cityId } = useParams();
-    const [cityDetails, setCityDetails] = useState(null);
-    const navigate = useNavigate();
+function CityDetails({ user }) {
+  const { cityId } = useParams();
+  const [cityDetails, setCityDetails] = useState(null);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        getCity();
-    }, [cityId]);
+  useEffect(() => {
+    getCity();
+  }, [cityId]);
 
-    const getCity = () => {
-        axios
-            .get(`${API_URL}/cities.json`)
-            .then((response) => {
-                const cityObj = response.data;
-                const cityArr = Object.keys(cityObj).map((id) => ({
-                    id,
-                    ...cityObj[id],
-                }));
-                const specificCity = cityArr.find(
-                    (cityItem) => cityItem.city.toLowerCase() === cityId.toLowerCase()
-                );
-                if (specificCity) {
-                    setCityDetails(specificCity);
-                } else {
-                    console.log("City not found");
-                }
-            })
-            .catch((e) => console.log("No cities found", e));
-    };
+  const getCity = () => {
+    axios
+      .get(`${API_URL}/cities.json`)
+      .then((response) => {
+        const cityObj = response.data;
+        const cityArr = Object.keys(cityObj).map((id) => ({
+          id,
+          ...cityObj[id],
+        }));
+        const specificCity = cityArr.find(
+          (cityItem) => cityItem.city.toLowerCase() === cityId.toLowerCase()
+        );
+        if (specificCity) {
+          setCityDetails(specificCity);
+        } else {
+          console.log("City not found");
+        }
+      })
+      .catch((e) => console.log("No cities found", e));
+  };
 
-    const deleteCity = () => {
-        user?
-        (axios
-            .delete(`${API_URL}/cities/${cityDetails.id}.json`)
-            .then(() => {
-                navigate("/");
-            })
-            .catch((e) => console.log("Error"))):
-            (
-                navigate("/Login"));
-    };
+  const deleteCity = () => {
+    user ?
+      (axios
+        .delete(`${API_URL}/cities/${cityDetails.id}.json`)
+        .then(() => {
+          navigate("/");
+        })
+        .catch((e) => console.log("Error"))) :
+      (
+        navigate("/Login"));
+  };
 
-    if (cityDetails === null) {
-        return <Load />;
-    }
+  if (cityDetails === null) {
+    return <Load />;
+  }
 
-    const sortedDetails = (str) => {
-        return str
-            .split(".")
-            .map((item) => item.trim())
-            .filter((item) => item !== "")
-            .sort();
-    };
+  const sortedDetails = (str) => {
+    return str
+      .split(".")
+      .map((item) => item.trim())
+      .filter((item) => item !== "")
+      .sort();
+  };
 
-    const sortedLandmark = sortedDetails(cityDetails.landmarks);
-    const sortedActivities = sortedDetails(cityDetails.activities);
-    const sortedRestaurants = sortedDetails(cityDetails.restaurants);
+  const sortedLandmark = sortedDetails(cityDetails.landmarks);
+  const sortedActivities = sortedDetails(cityDetails.activities);
+  const sortedRestaurants = sortedDetails(cityDetails.restaurants);
 
-    return (
+  return (
 
-       <>
-        <div className="city-wrapper">
-            <h2 className="city"><i> {cityDetails.city} </i> </h2></div>
-            <p className="description"><b>{cityDetails.description}</b></p>
+    <>
+      <div className="city-wrapper">
+        <h2 className="city"><i> {cityDetails.city} </i> </h2></div>
+      <p className="description"><b>{cityDetails.description}</b></p>
 
-            <div>
-                <img className="image" src={cityDetails.image} />
-            </div>
-            <div className="info">
-                <label className="Landmark"><b>Landmark:</b>
-                    <ul className="land"> {sortedLandmark.map((land, i) => {
-                        return (
-                            <li > {land} </li>);
-                    })}  </ul>
-                </label>
-                <label><b> Activities: </b>
-                    <ul className="activity" > {sortedActivities.map((elm, i) => {
-                        return (
-                            <li >
-                                {elm} </li>)
+      <div>
+        <img className="image" src={cityDetails.image} />
+      </div>
+      <div className="info">
+        <label className="Landmark"><b>Landmark:</b>
+          <ul className="land"> {sortedLandmark.map((land, i) => {
+            return (
+              <li > {land} </li>);
+          })}  </ul>
+        </label>
+        <label><b> Activities: </b>
+          <ul className="activity" > {sortedActivities.map((elm, i) => {
+            return (
+              <li >
+                {elm} </li>)
 
-                    })}  </ul>
-                </label>
-            </div>
+          })}  </ul>
+        </label>
+      </div>
 
-            <div className="moreDetails" >
-                <label> <b> Restaurants: </b>
-                    <ul>{sortedRestaurants.map((food, i) => {
-                        return (
-                            <span className="act" key={i}>
-                                <li>  {food} </li>
-                            </span>)
-                    })} </ul>
-                </label>
+      <div className="moreDetails" >
+        <label> <b> Restaurants: </b>
+          <ul>{sortedRestaurants.map((food, i) => {
+            return (
+              <span className="act" key={i}>
+                <li>  {food} </li>
+              </span>)
+          })} </ul>
+        </label>
 
-                <label className=" time">
-                    <div><b>Best Time to visit: </b> {cityDetails.time}</div>
-                    <div><b>Budget (per person): </b>{cityDetails.budget}</div>
+        <label className=" time">
+          <div><b>Best Time to visit: </b> {cityDetails.time}</div>
+          <div><b>Budget (per person): </b>{cityDetails.budget}</div>
 
-                    <div className="Stay"><b> Accomodation: </b>
-                        <label>
-                            <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
-                                <img src="https://www.yieldplanet.com/wp-content/uploads/2019/05/3Y-500x500-1.jpeg" alt="Booking.com" />
-                            </a>
-                            <a href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer">
-                                <img src="https://images.seeklogo.com/logo-png/28/1/airbnb-logo-png_seeklogo-284907.png" alt="Airbnb" />
-                            </a>
-                        </label>
-                    </div>
-                </label>
-            </div>
+          <div className="Stay"><b> Accomodation: </b>
+            <label>
+              <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.yieldplanet.com/wp-content/uploads/2019/05/3Y-500x500-1.jpeg" alt="Booking.com" />
+              </a>
+              <a href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://images.seeklogo.com/logo-png/28/1/airbnb-logo-png_seeklogo-284907.png" alt="Airbnb" />
+              </a>
+            </label>
+          </div>
+        </label>
+      </div>
 
-            <div className="button">
-                <Link to={`/cities/edit/${cityId}`}>
-                    <Button variant="filled" color="indigo" radius="md">Edit City ✏️</Button>  </Link>
+      <div className="button">
+        <Link to={`/cities/edit/${cityId}`}>
+          <Button variant="filled" color="indigo" radius="md">Edit City ✏️</Button>  </Link>
 
-                <Button variant="filled" color="red" onClick={(deleteCity)}>Delete City 🗑️ </Button>
-            </div>
-     </>
+        <Button variant="filled" color="red" onClick={(deleteCity)}>Delete City 🗑️ </Button>
+      </div>
+    </>
 
 
-    )
+  )
 
   return (
     <>
