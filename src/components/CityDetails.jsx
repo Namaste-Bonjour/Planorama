@@ -104,19 +104,19 @@ function CityDetails({user}) {
                 </label>
 
                 <label className=" time">
-                    <p><b>Best Time to visit: </b> {cityDetails.time}</p>
-                    <p><b>Budget (per person): </b>{cityDetails.budget}</p>
+                    <div><b>Best Time to visit: </b> {cityDetails.time}</div>
+                    <div><b>Budget (per person): </b>{cityDetails.budget}</div>
 
-                    <p className="Stay"><b> Accomodation: </b>
+                    <div className="Stay"><b> Accomodation: </b>
                         <label>
-                            <a href="https://www.booking.com/index.en-gb.html?aid=2311236;label=en-de-booking-desktop-rlPWSbMHB321nhxukayXdwS652796016687:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-334108349:lp9042217:li:dec:dm;ws=&gad_source=1&gclid=CjwKCAiAn9a9BhBtEiwAbKg6fs9m9Ibg1xLPIB2T8WyZ5DkDjL6_5cIBHonpuAaOeBXlUsWaGusp9hoCI6QQAvD_BwE" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
                                 <img src="https://www.yieldplanet.com/wp-content/uploads/2019/05/3Y-500x500-1.jpeg" alt="Booking.com" />
                             </a>
-                            <a href="https://www.airbnb.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer">
                                 <img src="https://images.seeklogo.com/logo-png/28/1/airbnb-logo-png_seeklogo-284907.png" alt="Airbnb" />
                             </a>
                         </label>
-                    </p>
+                    </div>
                 </label>
             </div>
 
