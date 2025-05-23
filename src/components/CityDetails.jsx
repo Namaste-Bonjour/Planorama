@@ -3,7 +3,6 @@ import { useNavigate, Link, useParams } from "react-router-dom";
 import { API_URL } from "../config/api";
 import { Button } from '@mantine/core';
 import axios from "axios";
-import "./CountryList.css";
 import "./CityDetails.css";
 import Load from "./Loader";
 
