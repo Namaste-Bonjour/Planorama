@@ -1,3 +1,32 @@
+
+.city {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.description {
+  margin: 20px;
+  font-size: 24px;
+  font-style: italic;
+  color: #34495e;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 .info {
   display: flex;
   justify-content: center; /* Or use 'space-betwwen' for side-by-side centered content */
