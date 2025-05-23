@@ -35,6 +35,7 @@
 
 .Page {
   display: flex;
+  width:200px;
   margin-left: 50px;
   margin-top: 60px;
   gap: 0;
@@ -42,7 +43,6 @@
 
 .Country-city {
   background-color: rgb(207, 179, 222);
-  width: 200px;
   text-align: center;
   border-radius: 8px;
 }
@@ -52,33 +52,7 @@
   font-size: larger;
 }
 
-/*city details page */
-.city {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #2c3e50;
-  text-align: center;
-  margin-top: 20px;
-}
 
-.description {
-  margin: 20px;
-  font-size: 24px;
-  font-style: italic;
-  color: #34495e;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.image {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 /* Landmark and activities- Label 1 
 .info {
@@ -122,7 +96,7 @@
 }
 
 
-/* Restaurant , time, budget- Label 2 
+/* Restaurant , time, budget- Label 2
 
 .moreDetails {
   display: flex;
@@ -182,8 +156,8 @@ a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}*/
-
+}
+*/
 
 .map-window {
   position: absolute;
