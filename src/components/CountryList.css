@@ -13,10 +13,7 @@
 .card {
   align-content: center;
   box-shadow: rgb(147, 147, 170);
-  opacity: 100%;
   background-color: none;
-
-
 }
 
 .card:hover {
@@ -28,7 +25,6 @@
 .Country-List img {
   width: 200px;
   height: 200px;
-  opacity: 100%;
 }
 
 /*city page */
