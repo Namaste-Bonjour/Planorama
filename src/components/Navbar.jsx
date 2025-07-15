@@ -18,19 +18,19 @@ function navbar() {
       <nav className={`nav ${isMenuOpen ? "show" : ""}`}>
         <div className="button">
         <NavLink to="/">
-        <Button variant="filled"color="grape">Home</Button>
+        <Button size= "lg" variant="filled"color="grape">Home</Button>
         </NavLink>
         <NavLink to="/countries/create">
-        <Button variant="filled"color="grape">Contribute</Button>
+        <Button size= "lg" variant="filled"color="grape">Contribute</Button>
         </NavLink>
         <NavLink to="/CityRating">
-        <Button variant="filled"color="grape">Rate a City</Button>
+        <Button size= "lg" variant="filled"color="grape">Rate a City</Button>
         </NavLink>
         <NavLink to="/AboutUs">
-        <Button variant="filled"color="grape">About us</Button>
+        <Button size= "lg" variant="filled"color="grape">About us</Button>
         </NavLink>
         <NavLink to="/Authenticate" >
-        <Button variant="filled"color="grape">Login 👤</Button>
+        <Button size= "lg" variant="filled"color="grape">Login 👤</Button>
         </NavLink>
         </div>
       </nav>
