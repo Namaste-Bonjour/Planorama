@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Marker, Popup, MapContainer, TileLayer } from 'react-leaflet';
 import axios from "axios";
 import Load from "./Loader";
-import "./CountryList.css";
+import "./Citylist.css";
 import 'leaflet/dist/leaflet.css';
 import { Button } from "@mantine/core";
 
@@ -25,6 +25,7 @@ function Citylist() {
 
   const splitCoordinates = (str) => {
     const ustr = str.split("°");
+    ustr[0] = parseFloat(ustr[0].trim());
     ustr[1] = ustr[1].trim();
     return ((ustr[1] === "W") || (ustr[1] === "S")) ? -ustr[0] : ustr[0];
   };
@@ -112,19 +113,20 @@ function Citylist() {
           {Object.keys(groupedCities).map((country) => (
             country === name && (
 
-              <label className="Country-city">
-                <Link to={`/countries/${country}`} key={country}>
+              <div className="Country-city" key={country}>
+                <Link to={`/countries/${country}`} >
                   <h2>{country}</h2>
                 </Link>
                
                   {groupedCities[country].map((cityDetails) => (
                    <div className="card" key={cityDetails.id}>
                       <Link className="City-card" to={`/cities/${cityDetails.city}`}>
-                        <h3>{cityDetails.city}</h3>  </Link>
+                        <h3>{cityDetails.city}</h3> 
+                      </Link>
                     </div>
                   ))}
                
-              </label>
+              </div>
             )
           ))}
         </div >
